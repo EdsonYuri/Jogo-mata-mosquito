@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo mata mosquito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="resultado">
+        <img src="" alt="" id="result">
+        <a href="index.html"><button id="reiniciar">Reiniciar</button></a>
+    </div>
+
+    <script>
+        let resultado = sessionStorage.getItem('result')
+        let finalImage = document.getElementById('result')
+
+        switch(resultado){
+            case 'victory':
+            finalImage.setAttribute('src', "/imagens/vitoria.png")
+            break;
+            case 'gameOver':
+            finalImage.setAttribute('src', "/imagens/game_over.png")
+            break;
+        }
+    </script>
+</body>
+</html>

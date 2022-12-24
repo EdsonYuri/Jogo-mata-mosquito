@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo mata mosquito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="janelaInicio">
+        <div class="content">
+            <div id="logo">
+                <img src="./imagens/game.png" alt="">
+            </div><br>
+
+            <div id="seleção">
+                <select name="" id="selectDifficult">
+                    <option value="undefined" selected disabled> -- Selecione o nivel -- </option>
+                    <option value="facil">Facil</option>
+                    <option value="dificil">Dificil</option>
+                    <option value="chuck Norris">Chuck Norris</option>
+                </select><br>
+                <button id="iniciar" onclick="play()">Começar jogo</button>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    <script>
+        let selectDifficult = document.getElementById('selectDifficult')
+        let Difficult
+        function play() {
+            Difficult = selectDifficult.value
+            sessionStorage.setItem('difficult', Difficult)
+
+            if (Difficult === 'undefined') {
+                window.alert('selecione um nivel para iniciar')
+                window.location.href = './index.html'
+            } else {
+                window.location.href = './jogo.html'
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('./imagens/background.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#janelaInicio {
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selectDifficult{
+    width: 14em;
+    height: 3em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: medium;
+}
+
+#iniciar {
+    width: 7em;
+    height: 2em;
+    border-radius: 0.5em;
+    font-size: x-large;
+    background-color: rgb(213, 17, 17);
+    border: 3px solid rgb(187, 18, 18);
+}
+
+#iniciar:hover {
+    cursor: pointer;
+    background-color: rgb(190, 24, 24);
+}
+
+#seleção{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#janelaGame {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: url(./imagens/mata_mosca.png) 25 25, auto;
+}
+
+#status {
+    width: 15em;
+    height: 6em;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#LifeSprites{
+    display: flex;
+}
+.heart{
+    width: 3em;
+}
+
+#mosca {
+    width: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+#resultado {
+    height: 35em;
+    width: 30em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reiniciar {
+    background-color: rgb(41, 41, 41);
+    width: 7em;
+    height: 2em;
+    margin: 8px;
+    border-radius: 0.5em;
+    font-size: x-large;
+    color: white;
+    border: none;
+}
+#reiniciar:hover{
+    background-color: rgb(21, 21, 21);
+    cursor: pointer;
+}
+#logo{
+    width: 90%;
+}
+
+@media (max-width: 800px){
+    #janelaInicio{
+        width: 100%;
+        justify-content: center;
+        height: 100vh;
+    }
+    #seleção{
+        height: 10em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #resultado{
+        height: 100vh;
+    }
+}
